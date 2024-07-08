@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fundo-tela*/
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background: linear-gradient(rgba(44, 44, 42, 0), rgba(20,20,20)), url('img/homem.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-position-y:0px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+
+
+header{
+    width: 100%;
+    height: 7vh;
+    background: rgba(0, 0, 0, 0.973);
+}
+.menu-content{
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo{
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    color: rgba(251,255,0);
+}
+
+.menu-content .list-itens{
+    display: flex;
+    list-style: none;
+    gap:10px;
+}
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+.menu-content .list-itens a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: rgba(251,255,0);
+    transition: all 1.5s ease;   
+}
+
+.menu-content .list-itens a:hover:before{
+    width: 100%;
+}
+
+/* centro conteudo principal*/
+main{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* texto conteudo principal*/
+.primary-text{
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom:2rem;
+    text-align: center;
+}
+
+.segundo-texto{
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color:rgb(165,165,165);
+    text-transform: uppercase;
+}
+
+/* botoes */
+.btns-text{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.btns-text button{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1.5px solid rgba(251,255,0);
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns-text button:before{
+    content:'';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61,61,62);
+    z-index: -1;
+    transition: 1s;
+}
+.btns-text button:hover{
+    color:rgb(255, 251, 0);
+    border:none;
+}
+
+.btns-text button:hover:before{
+    width: 100%;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .primary-text {
+        width: 700px;
+        font-size: 4rem;
+    }
+
+    .segundo-texto {
+        font-size: 1.8rem;
+    }
+
+    .btns-text button {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .primary-text {
+        width: 600px;
+        font-size: 3.5rem;
+        
+    }
+
+    .segundo-texto {
+        font-size: 1.6rem;
+    }
+
+    .btns-text button {
+        width: 180px;
+        height: 45px;
+    }
+
+    .menu-content {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .primary-text {
+        width: 500px;
+        font-size: 3rem;
+        
+
+    }
+
+    body {
+        background-size: cover;
+    }
+    .segundo-texto {
+        font-size: 1.4rem;
+    }
+
+    .btns-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btns-text button {
+        width: 160px;
+        height: 40px;
+    }
+
+    .menu-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        display:none;
+    }
+
+    .menu-content .list-itens {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 576px){
+    .primary-text {
+        width: 300px;
+        font-size: 2.5rem;
+    }
+
+    .segundo-texto {
+        font-size: 1.2rem;
+    }
+    }
